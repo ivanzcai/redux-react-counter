@@ -5,13 +5,20 @@ import store from "./store/";
 function Counter(props) {
   console.log(props);
   return (
-    <div>
-      <h1>Hello : {props.name}</h1>
-      <p>Counter: {props.count}</p>
-      <button onClick={props.onIncrementClick}>Increment</button>
+    <React.Fragment>
+      {" "}
+      <div>
+        <h1>Hello : {props.name}</h1>
+        <p>Counter: {props.count}</p>
+        <button onClick={props.onIncrementClick}>Increment</button>
 
-      <input onBlur={props.onBlurText} />
-    </div>
+        <input onBlur={props.onBlurText} />
+      </div>
+      <div>
+        <input value={props.inputValue} />
+        <p>{props.inputValue}</p>
+      </div>
+    </React.Fragment>
   );
 }
 
